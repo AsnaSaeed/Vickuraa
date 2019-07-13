@@ -45,10 +45,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -120,10 +128,27 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\bookingsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\schedulesController.cs" />
+    <Compile Include="Controllers\userDetailsController.cs" />
+    <Compile Include="Controllers\usersController.cs" />
+    <Compile Include="Controllers\vesselsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\booking.cs" />
+    <Compile Include="Models\crew.cs" />
+    <Compile Include="Models\crewRank.cs" />
+    <Compile Include="Models\destination.cs" />
+    <Compile Include="Models\package.cs" />
+    <Compile Include="Models\packageType.cs" />
+    <Compile Include="Models\route.cs" />
+    <Compile Include="Models\schedule.cs" />
+    <Compile Include="Models\user.cs" />
+    <Compile Include="Models\userDetail.cs" />
+    <Compile Include="Models\vessel.cs" />
+    <Compile Include="Models\vicukraaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +159,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\demo.css" />
+    <Content Include="Content\fonts\ionicons.svg" />
+    <Content Include="Content\Image\vickuraa.png" />
+    <Content Include="Content\Image\vicuraa_logo_white.svg" />
+    <Content Include="Content\ionicons.min.css" />
     <Content Include="Content\pixeladmin-dark.min.css" />
     <Content Include="Content\pixeladmin-dark.rtl.min.css" />
     <Content Include="Content\pixeladmin.min.css" />
@@ -206,8 +236,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\app.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\fonts\ionicons.eot" />
+    <Content Include="Content\fonts\ionicons.ttf" />
+    <Content Include="Content\fonts\ionicons.woff" />
+    <Content Include="Content\_bootstrap-datepicker.scss" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\demo.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -220,7 +255,9 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\momentum.js" />
     <Content Include="Scripts\pace.min.js" />
+    <Content Include="Scripts\pixeladmin.js" />
     <Content Include="Scripts\pixeladmin.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -236,10 +273,35 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\users\Create.cshtml" />
+    <Content Include="Views\users\Delete.cshtml" />
+    <Content Include="Views\users\Details.cshtml" />
+    <Content Include="Views\users\Edit.cshtml" />
+    <Content Include="Views\users\Index.cshtml" />
+    <Content Include="Views\userDetails\Create.cshtml" />
+    <Content Include="Views\userDetails\Delete.cshtml" />
+    <Content Include="Views\userDetails\Details.cshtml" />
+    <Content Include="Views\userDetails\Edit.cshtml" />
+    <Content Include="Views\userDetails\Index.cshtml" />
+    <Content Include="Views\vessels\Delete.cshtml" />
+    <Content Include="Views\vessels\Details.cshtml" />
+    <Content Include="Views\vessels\Edit.cshtml" />
+    <Content Include="Views\vessels\VesselList.cshtml" />
+    <Content Include="Views\vessels\AddVessel.cshtml" />
+    <Content Include="Views\schedules\Create.cshtml" />
+    <Content Include="Views\schedules\Delete.cshtml" />
+    <Content Include="Views\schedules\Details.cshtml" />
+    <Content Include="Views\schedules\Edit.cshtml" />
+    <Content Include="Views\schedules\Index.cshtml" />
+    <Content Include="Views\schedules\AddSchedule.cshtml" />
+    <Content Include="Views\bookings\Create.cshtml" />
+    <Content Include="Views\bookings\Delete.cshtml" />
+    <Content Include="Views\bookings\Details.cshtml" />
+    <Content Include="Views\bookings\Edit.cshtml" />
+    <Content Include="Views\bookings\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

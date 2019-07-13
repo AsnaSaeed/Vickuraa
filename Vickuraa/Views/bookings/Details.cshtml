@@ -1,0 +1,178 @@
+﻿@model Vickuraa.Models.booking
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>booking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.package.packageID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.package.packageID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.schedule.scheduleID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.schedule.scheduleID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quantity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.receiverName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.receiverName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.receiverAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.receiverAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.receiverContactNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.receiverContactNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.senderName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.senderName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.senderContactNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.senderContactNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.invoiceNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.invoiceNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.invoiceYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.invoiceYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecievedPhysicalUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecievedPhysicalUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RecievedPhyscialDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RecievedPhyscialDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.paymentRecievedUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.paymentRecievedUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.paymentRecievedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.paymentRecievedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.receiptNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.receiptNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.receiptYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.receiptYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dispatchedUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dispatchedUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dispatchedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dispatchedDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.bookingID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

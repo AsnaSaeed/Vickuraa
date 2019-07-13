@@ -1,0 +1,74 @@
+﻿@model Vickuraa.Models.vessel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>vessel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.user.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VesselRegNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VesselRegNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.availWeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.availWeight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.availVolume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.availVolume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vesselName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vesselName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.enteredDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.enteredDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.enteredUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.enteredUser)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.vesselID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

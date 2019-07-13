@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Vickuraa.Models.schedule>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.route.routeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vessel.VesselRegNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estimateDeparturetime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estimateArrivaltime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.arrivedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.departedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.entereddate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.route.routeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.user.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vessel.VesselRegNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estimateDeparturetime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estimateArrivaltime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arrivedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.departedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.entereddate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.scheduleID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.scheduleID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.scheduleID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,147 @@
+﻿@model IEnumerable<Vickuraa.Models.booking>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.package.packageID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.schedule.scheduleID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.user.username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receiverName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receiverAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receiverContactNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.senderName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.senderContactNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.invoiceNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.invoiceYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecievedPhysicalUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RecievedPhyscialDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.paymentRecievedUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.paymentRecievedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receiptNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.receiptYear)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dispatchedUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dispatchedDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.package.packageID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.schedule.scheduleID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.user.username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receiverName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receiverAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receiverContactNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.senderName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.senderContactNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.invoiceNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.invoiceYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecievedPhysicalUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RecievedPhyscialDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.paymentRecievedUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.paymentRecievedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receiptNo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.receiptYear)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dispatchedUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dispatchedDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.bookingID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.bookingID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.bookingID })
+        </td>
+    </tr>
+}
+
+</table>

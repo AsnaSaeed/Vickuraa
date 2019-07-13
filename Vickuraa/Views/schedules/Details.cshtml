@@ -1,0 +1,82 @@
+﻿@model Vickuraa.Models.schedule
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>schedule</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.route.routeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.route.routeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user.username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vessel.VesselRegNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vessel.VesselRegNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estimateDeparturetime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estimateDeparturetime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estimateArrivaltime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estimateArrivaltime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.arrivedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.arrivedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.departedDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.departedDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.entereddate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.entereddate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.scheduleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
