@@ -1,0 +1,80 @@
+﻿@model Vickuraa.Models.vessel
+
+<h1><span class="text-muted font-weight-light"><i class="page-header-icon ion-ios-shuffle info"></i>Vessels Details</span></h1>
+<style>
+    dl {
+        margin-bottom: 50px;
+    }
+
+        dl dt {
+            background: #1ba804;
+            color: #fff;
+            float: left;
+            font-weight: bold;
+            margin-right: 10px;
+            padding: 5px;
+            width: 100px;
+        }
+
+        dl dd {
+            margin: 2px 0;
+            padding: 5px 0;
+        }
+</style>
+
+<div>
+    <h4>vessel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            User Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.username)
+        </dd>
+
+
+        <dt>
+            Vessel Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vesselName)
+        </dd>
+
+
+        <dt>
+            Vwessel RegNo
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VesselRegNo)
+        </dd>
+
+        <dt>
+            Avaialble Weight
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.availWeight)
+        </dd>
+
+        <dt>
+            Avaialble Volume
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.availVolume)
+        </dd>
+
+       
+
+       
+
+    </dl>
+</div>
+<p>
+    <a type="button" class="btn btn-primary btn-3d pull-left" href="~/vessels/EditVessel/@Model.vesselID"><i class="fa fa-list"></i>Edit</a>
+    <a type="button" class="btn btn-warning btn-3d pull-left" href="~/vessels/VeselList" style="margin:0 10px"><i class="fa fa-list"></i>View List</a>
+</p>

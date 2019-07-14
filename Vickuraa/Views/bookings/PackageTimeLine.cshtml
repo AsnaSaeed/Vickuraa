@@ -1,0 +1,81 @@
+﻿@model Vickuraa.Models.booking
+
+<h1><span class="text-muted font-weight-light"><i class="page-header-icon ion-ios-shuffle info"></i>Package Timeline</span></h1>
+<style>
+    dl {
+        margin-bottom: 50px;
+    }
+
+        dl dt {
+            background: #1ba804;
+            color: #fff;
+            float: left;
+            font-weight: bold;
+            margin-right: 30px;
+            padding: 5px;
+            width: 100px;
+        }
+
+        dl dd {
+            margin: 2px 0;
+            padding: 5px 0;
+        }
+</style>
+
+<div>
+
+    <dl class="dl-horizontal">
+        <dt style="width:40%">
+            Requested Date
+        </dt>
+
+        <dd>
+            @ViewBag.RequestedDate
+        </dd>
+
+
+        <dt style="width:40%">
+            Boarded Date
+        </dt>
+
+        <dd>
+            @ViewBag.BoardedDate
+        </dd>
+
+
+        <dt style="width:40%">
+            Recieved User
+        </dt>
+
+        <dd>
+            @ViewBag.RecievedUser
+        </dd>
+
+        <dt style="width:40%">
+            Payment Recieved User
+        </dt>
+
+        <dd>
+            @ViewBag.PaymentRecievedUser
+        </dd>
+
+        <dt style="width:40%">
+            Payment Recieved Date
+        </dt>
+
+        <dd>
+            @ViewBag.PaymentRecievedDate
+        </dd>
+        <dt style="width:40%">
+            Dispatched Date
+        </dt>
+
+        <dd>
+            @ViewBag.DispatchedDate
+        </dd>
+
+
+
+
+    </dl>
+</div>

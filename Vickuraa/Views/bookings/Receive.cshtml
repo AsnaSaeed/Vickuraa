@@ -1,0 +1,20 @@
+﻿
+
+    <div>
+        @using (@Html.BeginForm("confirmreceive", "bookings", FormMethod.Post))
+        {
+            <div style="text-align:center; margin: auto;">
+                <h1>Receive</h1>
+                <div style="padding:10px;">
+                    @Html.DropDownList("bookingID", (IEnumerable<SelectListItem>)ViewBag.booking, "Bookings", new { @class = "form-control" })
+                    <br />
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Received" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>

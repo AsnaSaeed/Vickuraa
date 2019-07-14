@@ -129,6 +129,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\bookingsController.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\schedulesController.cs" />
     <Compile Include="Controllers\userDetailsController.cs" />
@@ -150,6 +151,7 @@
     <Compile Include="Models\vessel.cs" />
     <Compile Include="Models\vicukraaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\PackageBooking.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-dark.min.css" />
@@ -284,24 +286,36 @@
     <Content Include="Views\userDetails\Edit.cshtml" />
     <Content Include="Views\userDetails\Index.cshtml" />
     <Content Include="Views\vessels\Delete.cshtml" />
-    <Content Include="Views\vessels\Details.cshtml" />
-    <Content Include="Views\vessels\Edit.cshtml" />
-    <Content Include="Views\vessels\VesselList.cshtml" />
+    <Content Include="Views\vessels\VesselDetail.cshtml" />
+    <Content Include="Views\vessels\EditVessel.cshtml" />
     <Content Include="Views\vessels\AddVessel.cshtml" />
-    <Content Include="Views\schedules\Create.cshtml" />
     <Content Include="Views\schedules\Delete.cshtml" />
-    <Content Include="Views\schedules\Details.cshtml" />
-    <Content Include="Views\schedules\Edit.cshtml" />
-    <Content Include="Views\schedules\Index.cshtml" />
+    <Content Include="Views\schedules\ScheduleDetails.cshtml" />
+    <Content Include="Views\schedules\EditSchedule.cshtml" />
+    <Content Include="Views\schedules\ScheduleList.cshtml" />
     <Content Include="Views\schedules\AddSchedule.cshtml" />
-    <Content Include="Views\bookings\Create.cshtml" />
+    <Content Include="Views\vessels\VesselList.cshtml" />
+    <Content Include="Views\schedules\UpdateArrivalDate.cshtml" />
+    <Content Include="Views\schedules\UpdateDepartureDate.cshtml" />
+    <Content Include="Views\Dashboard\vesselDashboard.cshtml" />
+    <Content Include="Views\bookings\CreateBooking.cshtml" />
     <Content Include="Views\bookings\Delete.cshtml" />
-    <Content Include="Views\bookings\Details.cshtml" />
-    <Content Include="Views\bookings\Edit.cshtml" />
-    <Content Include="Views\bookings\Index.cshtml" />
+    <Content Include="Views\bookings\BookingDetails.cshtml" />
+    <Content Include="Views\bookings\EditBooking.cshtml" />
+    <Content Include="Views\bookings\PendingBookingList.cshtml" />
+    <Content Include="Views\bookings\SendPackage.cshtml" />
+    <Content Include="Views\bookings\Search.cshtml" />
+    <Content Include="Views\bookings\SearchResult.cshtml" />
+    <Content Include="Views\bookings\detailPackage.cshtml" />
+    <Content Include="Views\bookings\Receive.cshtml" />
+    <Content Include="Views\bookings\PaidBookingList.cshtml" />
+    <Content Include="Views\bookings\RecievePackage.cshtml" />
+    <Content Include="Views\bookings\DispatchPackage.cshtml" />
+    <Content Include="Views\bookings\PackageTimeLine.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Dto\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

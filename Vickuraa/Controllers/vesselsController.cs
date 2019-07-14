@@ -17,12 +17,13 @@ namespace Vickuraa.Controllers
         // GET: vessels
         public ActionResult VesselList()
         {
-            var vessels = db.vessels.Include(v => v.user);
+            var vessels = db.vessels.Include(v => v.user).Where(a => a.ownerID == 1);
             return View(vessels.ToList());
         }
 
+
         // GET: vessels/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult VesselDetail(int? id)
         {
             if (id == null)
             {
@@ -62,7 +63,7 @@ namespace Vickuraa.Controllers
         }
 
         // GET: vessels/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult EditVessel(int? id)
         {
             if (id == null)
             {
@@ -80,7 +81,7 @@ namespace Vickuraa.Controllers
         // POST: vessels/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "vesselID,VesselRegNo,ownerID,availWeight,availVolume,vesselName,enteredDate,enteredUser")] vessel vessel)
+        public ActionResult EditVessel([Bind(Include = "vesselID,VesselRegNo,ownerID,availWeight,availVolume,vesselName,enteredDate,enteredUser")] vessel vessel)
         {
             if (ModelState.IsValid)
             {

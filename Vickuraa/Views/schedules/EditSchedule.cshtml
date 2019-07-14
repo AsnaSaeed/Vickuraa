@@ -1,0 +1,52 @@
+﻿@model Vickuraa.Models.schedule
+
+
+<h1><span class="text-muted font-weight-light"><i class="page-header-icon ion-ios-clock warning"></i>Edit Schedule </span></h1>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.scheduleID)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.routeID, "Route", htmlAttributes: new { @class = "control-label" })
+            @Html.DropDownList("routeID", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.routeID, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.vesselID, "Vessel", htmlAttributes: new { @class = "control-label" })
+            @Html.DropDownList("vesselID", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.vesselID, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.estimateDeparturetime, "Estimate Departure Time", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.estimateDeparturetime, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.estimateDeparturetime, "", new { @class = "text-danger" })
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.estimateArrivaltime, "Estimate Arrival Time", htmlAttributes: new { @class = "control-label" })
+            @Html.EditorFor(model => model.estimateArrivaltime, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.estimateArrivaltime, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a type="button" class="btn btn-success btn-3d pull-left" href="~/schedules/ScheduleList"><i class="fa fa-search"></i> Details</a>
+            </div>
+        </div>
+    </div>
+}
+
+
+

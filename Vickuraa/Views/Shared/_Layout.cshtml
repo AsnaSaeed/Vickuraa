@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <title>Vickuraa: Responsive Bootstrap Template</title>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin" rel="stylesheet" type="text/css">
-    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,600,700,300&subset=latin" rel="stylesheet" type="text/css">
+    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- DEMO ONLY: Function for the proper stylesheet loading according to the demo settings -->
     <script>function _pxDemo_loadStylesheet(a, b, c) { var c = c || decodeURIComponent((new RegExp(";\\s*" + encodeURIComponent("px-demo-theme") + "\\s*=\\s*([^;]+)\\s*;", "g").exec(";" + document.cookie + ";") || [])[1] || "clean"), d = "rtl" === document.getElementsByTagName("html")[0].getAttribute("dir"); document.write(a.replace(/^(.*?)((?:\.min)?\.css)$/, '<link href="$1' + (c.indexOf("dark") !== -1 && a.indexOf("/css/") !== -1 && a.indexOf("/themes/") === -1 ? "-dark" : "") + (!d || 0 !== a.indexOf("assets/css") && 0 !== a.indexOf("assets/demo") ? "" : ".rtl") + '$2" rel="stylesheet" type="text/css"' + (b ? 'class="' + b + '"' : "") + ">")) }</script>
     <!-- DEMO ONLY: Set RTL direction -->
@@ -16,7 +16,8 @@
     <script>
         _pxDemo_loadStylesheet('/Content/bootstrap.min.css', 'px-demo-stylesheet-bs');
         _pxDemo_loadStylesheet('/Content/pixeladmin.min.css', 'px-demo-stylesheet-core');
-        _pxDemo_loadStylesheet('/Content/widgets.min.css', 'px-demo-stylesheet-widgets');</script>
+        _pxDemo_loadStylesheet('/Content/widgets.min.css', 'px-demo-stylesheet-widgets');
+    </script>
     <!-- DEMO ONLY: Load theme -->
     <script>
         function _pxDemo_loadTheme(a) { var b = decodeURIComponent((new RegExp(";\\s*" + encodeURIComponent("px-demo-theme") + "\\s*=\\s*([^;]+)\\s*;", "g").exec(";" + document.cookie + ";") || [])[1] || "clean"); _pxDemo_loadStylesheet(a + b + ".min.css", "px-demo-stylesheet-theme", b) }
@@ -25,10 +26,10 @@
     <script>_pxDemo_loadStylesheet('/Content/demo.css');</script>
     <!-- / Demo assets -->
     <!-- holder.js -->
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/holder/2.9.0/holder.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.0/holder.js"></script>
     <!-- Pace.js -->
-    <script src="~/Scripts/pace.min.js"></script>
-    <script src="~/Scripts/demo.js"></script>
+    @*<script src="~/Scripts/pace.min.js"></script>*@
+    @*<script src="~/Scripts/demo.js"></script>*@
     <!-- Custom styling -->
     <style>
 
@@ -50,7 +51,7 @@
             <li class="px-nav-box p-a-3 b-b-1" id="demo-px-nav-box">
                 <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 @*<img src="~/Content/Image/vickuraa.png" alt="" class="pull-xs-left m-r-2 border-round" style="width: 54px; height: 54px;">*@
-                <div class="font-size-16"><span class="font-weight-light">Welcome, </span><strong>John</strong></div>
+                <div class="font-size-16"><span class="font-weight-light">Welcome, </span><strong>Hindh</strong></div>
                 @*<div class="btn-group" style="margin-top: 4px;">
                 <a href="#" class="btn btn-xs btn-primary btn-outline"><i class="fa fa-envelope"></i></a>
                 <a href="#" class="btn btn-xs btn-primary btn-outline"><i class="fa fa-user"></i></a>
@@ -58,14 +59,16 @@
                 <a href="#" class="btn btn-xs btn-danger btn-outline"><i class="fa fa-power-off"></i></a>
             </div>*@
             </li>
-            <li class="px-nav-item px-nav-dropdown">
-                <a href="#"><i class="px-nav-icon ion-ios-pulse-strong"></i><span class="px-nav-label">Dashboards<span class="label label-danger">5</span></span></a>
+            <li class="px-nav-item">
+                <a href="~/Dashboard/vesselDashboard"><i class="px-nav-icon ion-ios-analytics"></i><span class="px-nav-label">Dashboard</span></a>
 
             </li>
             <li class="px-nav-item">
-                <a href="~/userDetails/Create"><i class="px-nav-icon ion-ios-analytics"></i><span class="px-nav-label">Add User</span></a>
-                <a href="~/vessels/AddVessel"><i class="px-nav-icon ion-ios-analytics"></i><span class="px-nav-label">Add New Vessel</span></a>
-                <a href="~/schedules/AddSchedule"><i class="px-nav-icon ion-ios-analytics"></i><span class="px-nav-label">Add New Schedule</span></a>
+                <a href="~/vessels/AddVessel"><i class="px-nav-icon ion-ios-shuffle"></i><span class="px-nav-label">Add New Vessel</span></a>
+                <a href="~/schedules/AddSchedule"><i class="px-nav-icon ion-ios-clock widget-pricing-hover"></i><span class="px-nav-label">Add New Schedule</span></a>
+                <a href="~/bookings/Search"><i class="px-nav-icon ion-ios-bell"></i><span class="px-nav-label">Sent Package</span></a>
+                <a href="~/bookings/PendingBookingList"><i class="px-nav-icon ion-ios-cart"></i><span class="px-nav-label">Make Payment and Recieve</span></a>
+                <a href="~/bookings/PaidBookingList"><i class="px-nav-icon ion-ios-location"></i><span class="px-nav-label">Dispatch Package</span></a>
 
             </li>
 
@@ -79,16 +82,16 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="index.html">
                 <span>
-                    <img src="~/Content/Image/vicuraa_logo_white.svg" alt="" class="pull-xs-left" style="height: 54px;">
+                    <img src="~/Content/Image/vicuraa_logo_white.svg" alt="" class="pull-xs-left" style="height: 35px; padding-top:13px">
 
                     @*<span class="px-demo-logo-1"></span>
-                        <span class="px-demo-logo-2"></span>
-                        <span class="px-demo-logo-3"></span>
-                        <span class="px-demo-logo-4"></span>
-                        <span class="px-demo-logo-5"></span>
-                        <span class="px-demo-logo-6"></span>
-                        <span class="px-demo-logo-7"></span>
-                        <span class="px-demo-logo-8"></span>*@
+        <span class="px-demo-logo-2"></span>
+        <span class="px-demo-logo-3"></span>
+        <span class="px-demo-logo-4"></span>
+        <span class="px-demo-logo-5"></span>
+        <span class="px-demo-logo-6"></span>
+        <span class="px-demo-logo-7"></span>
+        <span class="px-demo-logo-8"></span>*@
                     @*<span class="px-demo-logo-9"></span>*@
                 </span>
             </a>
@@ -273,8 +276,8 @@
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        <img src="assets/demo/avatars/1.jpg" alt="" class="px-navbar-image">
-                        <span class="hidden-md">John Doe</span>
+                        <img src="" alt="" class="px-navbar-image">
+                        <span class="hidden-md">Hindh Ali</span>
                     </a>
                     <ul class="dropdown-menu">
                         <li><a href="pages-profile-v2.html"><span class="label label-warning pull-xs-right"><i class="fa fa-asterisk"></i></span>Profile</a></li>
@@ -302,21 +305,11 @@
     |
     =============================================================================== -->
     <!-- jQuery -->
-    @*<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="~/Scripts/jquery-3.3.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/pixeladmin.min.js"></script>
-    <script>
-        // -------------------------------------------------------------------------
-        // Initialize DEMO sidebar
-
-        $(function () {
-            pxDemo.initializeDemoSidebar();
-
-            $('#px-demo-sidebar').pxSidebar();
-            pxDemo.initializeDemo();
-        });
-    </script>
+    
     <script type="text/javascript">
         // -------------------------------------------------------------------------
         // Initialize DEMO
@@ -348,164 +341,10 @@
         // -------------------------------------------------------------------------
         // Initialize uploads chart
 
-        $(function () {
-            var data = [
-                { day: '2014-03-10', v: pxDemo.getRandomData(20, 5) },
-                { day: '2014-03-11', v: pxDemo.getRandomData(20, 5) },
-                { day: '2014-03-12', v: pxDemo.getRandomData(20, 5) },
-                { day: '2014-03-13', v: pxDemo.getRandomData(20, 5) },
-                { day: '2014-03-14', v: pxDemo.getRandomData(20, 5) },
-                { day: '2014-03-15', v: pxDemo.getRandomData(20, 5) },
-                { day: '2014-03-16', v: pxDemo.getRandomData(20, 5) }
-            ];
 
-            new Morris.Line({
-                element: 'hero-graph',
-                data: data,
-                xkey: 'day',
-                ykeys: ['v'],
-                labels: ['Value'],
-                lineColors: ['#fff'],
-                lineWidth: 2,
-                pointSize: 4,
-                gridLineColor: 'rgba(255,255,255,.5)',
-                resize: true,
-                gridTextColor: '#fff',
-                xLabels: "day",
-                xLabelFormat: function (d) {
-                    return ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][d.getMonth()
-                    ] +
-                        ' ' +
-                        d.getDate();
-                },
-            });
-        });
 
         // -------------------------------------------------------------------------
-        // Initialize easy pie charts
-
-        $(function () {
-            var colors = pxDemo.getRandomColors();
-
-            var config = {
-                animate: 2000,
-                scaleColor: false,
-                lineWidth: 4,
-                lineCap: 'square',
-                size: 90,
-                trackColor: 'rgba(0, 0, 0, .09)',
-                onStep: function (_from, _to, currentValue) {
-                    var value = $(this.el).attr('data-max-value') * currentValue / 100;
-
-                    $(this.el)
-                        .find('> span')
-                        .text(Math.round(value) + $(this.el).attr('data-suffix'));
-                },
-            }
-
-            var data = [
-                pxDemo.getRandomData(1000, 1),
-                pxDemo.getRandomData(100, 1),
-                pxDemo.getRandomData(64, 1),
-            ];
-
-            $('#easy-pie-chart-1')
-                .attr('data-percent', (data[0] / 1000) * 100)
-                .attr('data-max-value', 1000)
-                .easyPieChart($.extend({}, config, { barColor: colors[0] }));
-
-            $('#easy-pie-chart-2')
-                .attr('data-percent', (data[1] / 100) * 100)
-                .attr('data-max-value', 100)
-                .easyPieChart($.extend({}, config, { barColor: colors[1] }));
-
-            $('#easy-pie-chart-3')
-                .attr('data-percent', (data[2] / 64) * 100)
-                .attr('data-max-value', 64)
-                .easyPieChart($.extend({}, config, { barColor: colors[2] }));
-        });
-
-        // -------------------------------------------------------------------------
-        // Initialize retweets graph
-
-        $(function () {
-            var data = [
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-            ];
-
-            $("#sparkline-1").pxSparkline(data,
-                {
-                    type: 'line',
-                    width: '100%',
-                    height: '42px',
-                    fillColor: '',
-                    lineColor: '#fff',
-                    lineWidth: 2,
-                    spotColor: '#ffffff',
-                    minSpotColor: '#ffffff',
-                    maxSpotColor: '#ffffff',
-                    highlightSpotColor: '#ffffff',
-                    highlightLineColor: '#ffffff',
-                    spotRadius: 4,
-                });
-        });
-
-        // -------------------------------------------------------------------------
-        // Initialize Monthly visitor statistics graph
-
-        $(function () {
-            var data = [
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-                pxDemo.getRandomData(300, 100),
-            ];
-
-            $("#sparkline-2").pxSparkline(data,
-                {
-                    type: 'bar',
-                    height: '42px',
-                    width: '100%',
-                    barSpacing: 2,
-                    zeroAxis: false,
-                    barColor: '#ffffff',
-                });
-        });
-
+      
         // -------------------------------------------------------------------------
         // Initialize scrollbars
 

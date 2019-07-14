@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Vickuraa.Models.schedule>
+
+<h1><span class="text-muted font-weight-light"><i class="page-header-icon ion-ios-clock"></i>Schedule List </span></h1>
+
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+
+            <th>
+                Vessel
+            </th>
+            <th>
+                Vessel Registory No
+            </th>
+
+            <th>
+                Arrived Date
+            </th>
+            <th>
+                Departed Date
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.vessel.vesselName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.vessel.VesselRegNo)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.arrivedDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.departedDate)
+                </td>
+
+                <td>
+                    <a type="button" class="btn btn-primary btn-3d pull-left" href="~/schedules/EditSchedule/@item.scheduleID"><i class="fa fa-pencil"></i> Edit</a>
+                    <a type="button" class="btn btn-warning btn-3d pull-left" href="~/schedules/UpdateArrivalDate/@item.scheduleID" style="margin:0 10px"><i class="fa fa-reply"></i> Update Arrival Date</a>
+                    <a type="button" class="btn btn-info btn-3d pull-left" href="~/schedules/UpdateDepartureDate/@item.scheduleID" style="margin:0 10px"><i class="fa fa-send"></i> Update Departure Date</a>
+                    <a type="button" class="btn btn-success btn-3d pull-left" href="~/schedules/ScheduleDetails/@item.scheduleID"><i class="fa fa-search"></i> Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

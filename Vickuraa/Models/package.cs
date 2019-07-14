@@ -23,7 +23,7 @@ namespace Vickuraa.Models
 
         public double volume { get; set; }
 
-        public double weight { get; set; }
+        public string packageDesc { get; set; }
 
         public double price { get; set; }
 

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Vickuraa.Models.booking>
+
+<h1><span class="text-muted font-weight-light"><i class="page-header-icon ion-ios-cart"></i>Make Payment and Recieve Package </span></h1>
+
+<table class="table table-striped">
+    <tr>
+        <th>
+            Package Desc
+        </th>
+        <th>
+            Reciever Name
+        </th>
+        <th>
+            Reciever Address
+        </th>
+
+        <th>
+            Reciever Contact No
+        </th>
+
+        <th>
+            Reciept No
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.package.packageDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.receiverName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.receiverAddress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.receiverContactNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.receiptNo)
+            </td>
+
+            <td>
+                <a type="button" class="btn btn-primary btn-3d pull-left" href="~/bookings/RecievePackage/@item.bookingID"><i class="fa fa-money"></i> Make Payment and Recieved</a>
+                <a type="button" class="btn btn-success btn-3d pull-left" href="~/bookings/BookingDetails/@item.bookingID" style="margin:0 10px"><i class="fa fa-list"></i>Details</a>
+            </td>
+        </tr>
+    }
+
+</table>

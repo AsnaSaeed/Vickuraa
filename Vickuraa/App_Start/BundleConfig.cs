@@ -16,6 +16,8 @@ namespace Vickuraa
                          "~/Scripts/demo.js"
                         ));
 
+       
+
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
@@ -31,6 +33,12 @@ namespace Vickuraa
 
                       ));
 
+            bundles.Add(new ScriptBundle("~/bundles/font").Include(
+                    "~/Content/fonts/ionicons.eot",
+                     "~/Content/fonts/ionicons.svg",
+                      "~/Content/fonts/ionicons.ttf"
+                    ));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.min.css",
                       "~/Content/themes/adminflare.min.css",
@@ -38,6 +46,7 @@ namespace Vickuraa
                      "~/Content/widgets.min.min.css",
                        "~/Content/widgets.min.min.css",
                         "~/Content/themes/clean.min.min.css"
+                  
                       ));
         }
     }

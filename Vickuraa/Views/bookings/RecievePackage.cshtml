@@ -1,0 +1,25 @@
+﻿@model Vickuraa.Models.booking
+
+<h1><span class="text-muted font-weight-light"><i class="page-header-icon ion-ios-shuffle"></i>Make Payment and Recieve Package</span></h1>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.bookingID)
+
+        <h4>Package Desc: @ViewBag.PackageDesc</h4>
+        <h4>Reciever: @ViewBag.receiverName</h4>
+        <h4>Reciever Address: @ViewBag.RecieverAddress</h4>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Make Payment" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+}
+
+

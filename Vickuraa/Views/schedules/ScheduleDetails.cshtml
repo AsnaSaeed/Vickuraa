@@ -1,0 +1,108 @@
+﻿@model Vickuraa.Models.schedule
+
+<h1><span class="text-muted font-weight-light"><i class="page-header-icon ion-ios-clock info"></i>Schedule Details</span></h1>
+<style>
+    dl {
+    margin-bottom:50px;
+}
+ 
+dl dt {
+    background:#1ba804;
+    color:#fff;
+    float:left; 
+    font-weight:bold; 
+    margin-right:10px; 
+    padding:5px;  
+    width:100px; 
+}
+ 
+dl dd {
+    margin:2px 0; 
+    padding:5px 0;
+}
+</style>
+
+<div>
+    <dl class="dl-horizontal">
+        <dt>
+            User Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user.username)
+        </dd>
+
+        <dt>
+            Vessel 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vessel.vesselName)
+        </dd>
+
+
+        <dt>
+            Vessel Registory No
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vessel.VesselRegNo)
+        </dd>
+        <dt>
+            Destination
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.route.destination.destinationName)
+        </dd>
+
+
+
+
+
+        <dt>
+            Estimated Departure Time
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estimateDeparturetime)
+        </dd>
+
+        <dt>
+            Estimate Arrival Time
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estimateArrivaltime)
+        </dd>
+
+        <dt>
+            Arrived Date
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.arrivedDate)
+        </dd>
+
+        <dt>
+            Departed Date
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.departedDate)
+        </dd>
+
+        <dt>
+            Entered Date
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.entereddate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a type="button" class="btn btn-primary btn-3d pull-left" href="~/schedules/EditSchedule/@Model.scheduleID"><i class="fa fa-list"></i>Edit</a>
+    <a type="button" class="btn btn-warning btn-3d pull-left" href="~/schedules/ScheduleList" style="margin:0 10px"><i class="fa fa-list"></i>View List</a>
+</p>
